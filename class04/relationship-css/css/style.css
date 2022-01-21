@@ -1,0 +1,23 @@
+/* this is a display of how direct relationships work  */
+h1 {
+  color: purple;
+}
+
+/* section is the 'parent' and h2 is the 'child' */
+section > h2 {
+  color: blue;
+}
+
+/* article is the parent and h2 is the child */
+/*  '>' means direct child */
+article > h2 {
+  color: red !important;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* this is a use of cascading */
+/* this says h2 which is the child of the article and the grandchild of section  */
+section article h2 {
+  color: orange;
+}
