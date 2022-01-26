@@ -1,7 +1,24 @@
 /* Please Make only Rhino and Zebra Blue */
+#rhino,
+#zebra {
+  color: blue;
+}
 
 /* Please Make only Hufflepuff Gold */
+#bestHouse {
+  color: gold;
+}
 
 /* Please select Duck with the highest level of specificity possible */
+/* super absurd to show how specific things can be..... */
+/* no spaces means has all those exact attributes  */
+h1#hi
+  + section.top
+  + section.middle
+  + article.areDucksDinosaurs
+  + h2.likesToQuack.fight10or100 {
+  color: chocolate !important;
+}
 
 /* Please select Rhino with the highest level of specificity possible */
+/* stopped here bc its way beyond the range of how common it is */
