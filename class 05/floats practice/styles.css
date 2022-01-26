@@ -1,0 +1,19 @@
+/* means select everything and ignore the border */
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  height: 94px;
+  border: 3px solid black;
+  clear: both;
+}
+
+section {
+  height: 300px;
+  width: 33.3333%;
+  border: 3px solid black;
+  float: left;
+}
