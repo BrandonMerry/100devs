@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  height: 100px;
+  border: 1px solid black;
+  clear: both;
+}
+
+.middleA {
+  height: 600px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.middle1 {
+  height: 600px;
+  width: 20%;
+  border: 1px solid black;
+  float: left;
+}
+
+.middle2 {
+  height: 600px;
+  width: 40%;
+  border: 1px solid black;
+  float: left;
+}
+.middle3 {
+  height: 600px;
+  width: 20%;
+  border: 1px solid black;
+  float: left;
+}
+.middle4 {
+  height: 600px;
+  width: 20%;
+  border: 1px solid black;
+  float: left;
+}
