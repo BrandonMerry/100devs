@@ -6,3 +6,20 @@
 /* Please Make only Hufflepuff Gold */
 
 /* Please keep Hufflepuff Gold and make ONLY Unicorn Gray  */
+
+section h2 {
+  color: blue;
+}
+
+/* this targets the second h2 */
+section > h2 + h2 {
+  color: purple;
+}
+
+section > article > h2 + h2 {
+  color: gold;
+}
+
+section > article > h2 {
+  color: grey, important!;
+}
