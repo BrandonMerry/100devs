@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+  /* determines block of text */
+  line-height: 1.5;
+  margin: 30px;
+  border: 5px solid limegreen;
+  padding: 50px;
+  background: skyblue;
+  color: #eeeeee;
+}
+
+a {
+  font-weight: bold;
+  color: #00cc99;
+}
+
+h1 {
+  /* different font family */
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 0;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+strong {
+  color: white;
+}
+
+p {
+  font-family: Georgia, serif;
+  margin-top: 0;
+  /* adds room betwen p1 & p2 */
+  margin-bottom: 27px;
+}
+
+/* this is a way to show sudo selector */
+p:nth-child(2n + 1) {
+  font-size: 30px;
+}
+
+img {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  height: 300px;
+}
+
+/* makes the pipe characters gray */
+nav {
+  color: gray;
+  text-align: center;
+}
+
+/* you can play with font-size and other values in 
+the chrome dev tools to see if you code matches the layout */
