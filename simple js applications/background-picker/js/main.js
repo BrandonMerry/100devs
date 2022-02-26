@@ -1,19 +1,15 @@
-document.getElementById('purple').onclick = partyPurple
-document.getElementById('green').onclick = partyGreen
-document.getElementById('blue').onclick = partyBlue
+document.getElementById('spain').onclick = spain
+document.getElementById('cuba').onclick = cuba
+document.getElementById('mor').onclick = mor
+document.getElementById('jm').onclick = jm
+document.getElementById('beach').onclick = beach 
+document.getElementById('seAsia').onclick = seAsia
+document.getElementById('mount').onclick = mount
+document.getElementById('auz').onclick = auz
+document.getElementById('mideast').onclick = mideast 
 
 
-function partyPurple() {
-  document.querySelector('body').style.backgroundColor = 'rgba(241,63,247,1)'
-  document.querySelector('body').style.color = 'white'
+function cuba() {
+  document.querySelector('body').style.backgroundImage = "url('/Users/graffius/learn to code/100devs/simple js applications/background-picker/img/Barcelona.jpg')"
 }
 
-function partyGreen() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,253,81,1)'
-  document.querySelector('body').style.color = 'white'
-}
-
-function partyBlue() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,254,255)'
-  document.querySelector('body').style.color = 'white'
-}
