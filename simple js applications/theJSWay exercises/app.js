@@ -77,3 +77,50 @@ let i = Number(prompt('Pick a number'))
 while (i >= 100 || i <= 50) {
     i =  prompt('Pick another number')
 }
+
+
+// ***************************** Multiplication table
+
+// Write a program that asks the user for a number, then shows the multiplication table for this number.
+let i = Number(prompt('Pick a number'))
+
+
+// When you are done, improve the program so it only accepts numbers between 2 and 9 (use the previous exercise as a blueprint).
+
+
+
+// ***************************** Neither yes nor no
+
+
+
+
+// ***************************** FizzBuzz
+// It shows "Fizz" instead if the number is divisible by 3.
+// It shows "Buzz" instead if the number is divisible by 5 and not by 3.
+
+for (var i = 1; i <= 100; i++) {
+    if (i % 3 === 0) {
+      console.log("Fizz");
+    } 
+    else if (i % 5 === 0) {
+      console.log("Buzz");
+    } 
+    else {
+      console.log(i);
+    }
+  }
+
+
+//   When it's done, improve it so that the program shows "FizzBuzz" instead for numbers divisible both by 3 and by 5.
+
+  for (var i = 1; i <= 100; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
