@@ -63,3 +63,10 @@ function isPalindrome(str){
         alert('no')
     }
 }
+
+
+
+// sort method 
+// this expects some way to sort content
+// (a,b)are parameters a-b shows how to sort 
+Array.sort((a,b) => a-b)
