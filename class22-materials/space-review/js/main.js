@@ -55,9 +55,9 @@ rstrings('potter is a goblin');
 
 let isPalindrome = s => s === s.split('').reverse().join('') ? alert ('yes') : alert('no');
 
-let isPalindrome(str){
-    let revStr = str.split('').reverse().join('')
-    if (str === revStr){
+function isPalindrome(str){
+    let revStr = str.split('').reverse().join('');
+    if (str.toLowerCase() === revStr.toLowerCase()){
         alert('yes')
     } else {
         alert('no')
