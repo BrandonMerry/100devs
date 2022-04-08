@@ -17,3 +17,18 @@ pizza.deliveryTime = function(){
 pizza.cookTime = function(){
     console.log("depends on the hour")
 }
+
+// the dry side of an object 
+// constructors 
+
+function MakePizza(pizzaStyle, pizzaToppings,pizzaCompany){
+    this.style = pizzaStyle
+    this.toppings = pizzaToppings
+    this.company = pizzaCompany
+    this.deliveryTime = function(){
+        alert('Too good to deliver')
+    }
+    this.cookTime = function(){
+        alert(`It depends on the ${this.style}`)
+    }
+}
