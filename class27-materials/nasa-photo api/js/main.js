@@ -11,9 +11,16 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
-        // js dev tools in browser shows img comes from hdurl 
+        // use this conditional to sort data 
+        if(data.media_type === 'image'){
+
+         // js dev tools in browser shows img comes from hdurl 
         document.querySelector('img').src = data.hdurl
-        //
+        }else if (data.media_type === 'video'){
+            document.querySelector('iframe').src = data.url
+        }
+        
+        
         document.querySelector('h3').innerText = data.explanation
 
       })
