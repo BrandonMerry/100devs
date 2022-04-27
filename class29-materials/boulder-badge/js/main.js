@@ -27,7 +27,7 @@ function battle(currentTemp){
 //You have joined an undeground pokemon leauge. In this league, trainers can use any number of pokemon. Print to the console "Pikachu I choose you" x times where x is the number of pokemon the trainer you are battling has in their party
 
 function fightUnderground(partySize){
-    for (let i = 0; i < partySize; i++) {
+    for (let i = 0; i < partySize.lenght; i++) {
         console.log("Pikachu I choose you")
       };
 }
