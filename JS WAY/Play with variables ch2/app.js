@@ -1,23 +1,23 @@
 // Write a program that asks the user for his first name and his last name. The program then displays them in one sentence.
 
-// const userFirstName = prompt("Type your first name");
-// const userLastName = prompt("Type your last name");
+const userFirstName = prompt("Type your first name");
+const userLastName = prompt("Type your last name");
 
-// alert(`Hello, ${userFirstName} + ${userLastName}`);
+alert(`Hello, ${userFirstName} ${userLastName}`);
 
 // Write a program that asks the user for a raw price. After that, it calculates the corresponding final price using a VAT rate of 20.6%.
 
-const price = prompt("Enter the price of your item")
+const price = Number(prompt("Enter the price of your item"));
 
-const pricePlueVAT = parsInt(price) * 1.206
+const pricePlueVAT = price * 1.206
 
 console.log(pricePlueVAT)
 
 // Write a program that asks for a temperature in Celsius degrees, then displays it in Fahrenheit degrees.
 
-const tempInF = prompt("enter a temperature");
+const tempInF = Number(prompt("enter a temperature"));
 
-let convertToC = parseInt(tempInF) * 9/5 + 32 
+let convertToC = tempInF * 9/5 + 32 
 
 console.log(convertToC)
 
