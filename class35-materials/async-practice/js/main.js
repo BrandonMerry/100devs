@@ -76,6 +76,7 @@
 // }
 // houseOne()
 
+
 //Code 05 -- THE NEW WAY OF LIFE 
 // const promise = new Promise((resolve, reject) => {
 //     const error = false
@@ -90,37 +91,48 @@
 //     .then(data => console.log(data))
 //     .catch(err => console.log(err))
 
-//Code 06
-// function houseOne(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 1')
-//         }, 1000)
-//     })
-// }
-// function houseTwo(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 2')
-//         }, 5000)
-//     })
-// }
-// function houseThree(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 3')
-//         }, 2000)
-//     })
-// }
-// houseOne()
-//     .then(data => console.log(data))
-//     .then(houseTwo)
-//     .then(data => console.log(data))
-//     .then(houseThree)
-//     .then(data => console.log(data))
-//     .catch(err => console.log(err))
+// <!-- .then runs if true -->
+// <!-- .catch runs if function is false -->
 
-//Code 07
+
+
+//Code 06 -- this is a promise chain / not a good readable format
+function houseOne(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Paper delivered to house 1')
+        }, 1000)
+    })
+}
+function houseTwo(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Paper delivered to house 2')
+        }, 5000)
+    })
+}
+function houseThree(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Paper delivered to house 3')
+        }, 2000)
+    })
+}
+
+// this is a chain of promises 
+houseOne()
+    .then(data => console.log(data))
+    .then(houseTwo)
+    .then(data => console.log(data))
+    .then(houseThree)
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+
+
+
+
+//Code 07 -- this is a great readable format in JS - using await 
+
 // function houseOne(){
 //     return new Promise((resolve, reject) => {
 //         setTimeout(() => {
@@ -154,7 +166,9 @@
 
 // getPaid()
 
-//Code 08
+//Code 08 -- ADD TRY CATCH BLOCK TO THIS 
+
+
 // async function getACuteDogPhoto(){
 //     const res = await fetch('https://dog.ceo/api/breeds/image/random')
 //     const data = await res.json()
