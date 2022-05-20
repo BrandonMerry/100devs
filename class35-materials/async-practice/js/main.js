@@ -12,6 +12,10 @@
 // houseTwo()
 // houseThree()
 
+// ********
+// <!--runs as houseOne, houseTwo, houseThree -->
+// ********
+
 //Code 02
 // function houseOne(){
 //     console.log('Paper delivered to house 1')
@@ -26,7 +30,13 @@
 // houseTwo()
 // houseThree()
 
-//Code 03
+// ************
+// <!-- runs as: houseOne, houseThree, houseTwo; even if tine===0 -->
+// <!-- setTimeout makes the browser wait to run the function#2 -->
+// ************
+
+
+// //Code 03 -- 
 // function houseOne(){
 //     console.log('Paper delivered to house 1')
 // }
@@ -40,9 +50,19 @@
 //     console.log('Paper delivered to house 3')
 // }
 // houseOne()
-// houseTwo(houseThree)
+// houseTwo(houseThree) 
 
-//Code 04
+// <!-- means houseTwo is a higher order function, houseThree is a callBack -->
+// <!-- means JS waits to complete houseTwo before going to houseThree -->
+
+// ************
+// <!-- runs as: houseOne, houseTwo, houseThree -->
+// <!-- This callback takes another function as an argument  (it is the argument in a higher order function)-->
+// ************
+
+
+
+//Code 04 CALLBACK HELL! 
 // function houseOne(){
 //     setTimeout(() => {
 //         console.log('Paper delivered to house 1')
@@ -56,7 +76,7 @@
 // }
 // houseOne()
 
-//Code 05
+//Code 05 -- THE NEW WAY OF LIFE 
 // const promise = new Promise((resolve, reject) => {
 //     const error = false
 //     if(!error){
