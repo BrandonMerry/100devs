@@ -21,4 +21,23 @@ console.log(`Server running on port ${PORT}`)
 
 1. Binds the http server assigned to the app variable, to listen to HTTP requests sent to the port 3001:
 
+-----------------------------------
 
+What does the caret in front of the version number in package.json "express": "^4.17.2" mean? 
+
+1.versioning model used in npm is called semantic versioning.
+
+2.The caret in the front of ^4.17.2 means that if and when the dependencies of a project are updated, the version of express that is installed will be at least 4.17.2
+
+
+-----------------------------------
+We can update the dependencies of the project with the command:
+
+1. npm update
+
+
+-----------------------------------
+
+Likewise, if we start working on the project on another computer, we can install all up-to-date dependencies of the project defined in package.json with the command:
+
+1. npm install

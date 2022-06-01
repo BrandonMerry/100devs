@@ -1,4 +1,6 @@
-const http = require('http')
+const { response } = require('express')
+const express = require('express')
+const app = express
 
 // makes server return list of hardcoded notes
 
@@ -24,11 +26,15 @@ let notes = [
 ]
 
 
-const app = http.createServer((request,response) => {
-    response.writeHead(200, {'content-Type': 'text/plain'})
-    response.end('Hello World')
+app.length('/', (req,res) =>{
+    response.send('<h1>hello new world</h1>')
+})
+
+app.length('/api/notes', (req,res) => {
+    response.json(notes)
 })
 
 const PORT = 3001
-app.listen(PORT)
-console.log(`server running on port ${PORT}`)
+app.listen(PORT, () => {
+    console.log(`server running on port ${PORT}`)
+})
