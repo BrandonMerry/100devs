@@ -1,6 +1,9 @@
-const { response } = require('express')
+ç
 const express = require('express')
-const app = express
+const app = express()
+
+app.use(express.json())
+
 
 // makes server return list of hardcoded notes
 
@@ -26,15 +29,37 @@ let notes = [
 ]
 
 
-app.length('/', (req,res) =>{
-    response.send('<h1>hello new world</h1>')
-})
+app.get('/', (request, response) => {
+    response.send('<h1>Hello World!</h1>')
+  })
+  
 
-app.length('/api/notes', (req,res) => {
-    response.json(notes)
-})
+  app.get('/api/notes/:id', (request, response) => {
+    const id = Number(request.params.id)
+    const note = notes.find(note => note.id === id)
+    if(note){
+        response.json(note)
+    } else {
+        response.status(404).end()
+    }
+  })
 
-const PORT = 3001
-app.listen(PORT, () => {
-    console.log(`server running on port ${PORT}`)
-})
+  app.post('/api/notes', (request, response) => {
+    const note = request.body
+    console.log(note)
+    response.json(note)
+  })
+
+  app.delete('/api/notes/:id', (req,res) => {
+      const id = Number(request.params.id)
+      const note = notes.find(note => note.id !== id)
+
+      response.status(204).end()
+  })
+
+
+
+  const PORT = 3001
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+  })
