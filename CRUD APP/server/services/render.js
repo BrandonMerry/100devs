@@ -18,6 +18,8 @@ exports.add_user = (req, res) =>{
     res.render('add_user');
 }
 
+// this returns all data from DB into the form for updating
+
 exports.update_user = (req, res) =>{
     axios.get('http://localhost:3000/api/users', { params : { id : req.query.id }})
         .then(function(userdata){
