@@ -26,7 +26,17 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 
 // respond the index.ejs file
 app.get('/', (req, res) =>{
-    res.render('index.ejs');
+    res.render('index');
+})
+
+// route for add new user from btn to form
+app.get('/add-user', (req, res) =>{
+    res.render('add_user');
+})
+
+// route from update btn to user form
+app.get('/update-user', (req, res) =>{
+    res.render('update_user');
 })
 
 app.listen(3000, () => {console.log(`server running on http://localhost:${PORT}`)});
