@@ -4,7 +4,6 @@ const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
 
-// requires the connection file
 const connectDB = require('./server/database/connection');
 
 const app = express();
@@ -12,7 +11,7 @@ const app = express();
 dotenv.config( { path : 'config.env'} )
 const PORT = process.env.PORT || 8080
 
-// log request with morgan
+// log requests
 app.use(morgan('tiny'));
 
 // mongodb connection

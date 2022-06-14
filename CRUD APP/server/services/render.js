@@ -2,7 +2,7 @@ const axios = require('axios');
 
 
 exports.homeRoutes = (req, res) => {
-    // Make a get request to /api/users // exports this function so you can use it in other files
+     // Make a get request to /api/users // exports this function so you can use it in other files
     axios.get('http://localhost:3000/api/users')
         .then(function(response){
             res.render('index', { users : response.data });
